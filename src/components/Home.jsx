@@ -1,8 +1,9 @@
 import { Configuration, OpenAIApi } from "openai";
 import { useState } from "react";
+import Navbar from "./Navbar"
 
 function Home() {
-  const [Prompt, Useprompt] = useState("Enter your prompt here !!");
+  const [Prompt, Useprompt] = useState("Enter your prompt here . . . . . . . . .");
   const [Image, UseImage] = useState("");
   const [Imageone, UseImageone] = useState("");
   const [Imagetwo, UseImagetwo] = useState("");
@@ -21,6 +22,14 @@ function Home() {
     "A cozy cafe with bookshelves lining the walls and steaming cups of coffee",
     "A starry night sky with constellations forming magical patterns",
     "A breathtaking view of a vast canyon stretching into the distance",
+    "A tranquil beach at sunrise, with gentle waves lapping against the shore and seagulls gliding through the air.",
+    "A rustic cabin nestled in a lush forest, surrounded by towering trees and the soothing sounds of chirping birds.",
+    "A bustling marketplace filled with vibrant colors, aromatic spices, and the lively chatter of vendors and shoppers.",
+    "A peaceful meadow covered in a blanket of wildflowers, with butterflies dancing from petal to petal.",
+    "A roaring waterfall cascading down moss-covered rocks, creating a misty oasis in the midst of a dense jungle.",
+    "A charming European village with cobblestone streets, quaint houses adorned with colorful shutters, and the aroma of freshly baked bread wafting through the air.",
+    "A majestic mountain peak piercing through fluffy clouds, offering a panoramic view of snow-capped ranges and a sea of evergreen forests."
+  
   ];
 
   const config = new Configuration({
@@ -62,27 +71,29 @@ function Home() {
   };
 
   return (
+    <>
+    <Navbar/>
     <div className=" p-7 m-auto">
       <br />
-      <div className="flex bg-neutral-500 rounded-lg  " >
+      <div className="flex bg-slate-50 rounded-lg min-h-[55px] ">
         <input
-          className=" min-w-[90%] min-h-[40px] m-auto bg-transparent"
+          className=" text-black min-w-[88%] min-h-[40px] m-auto bg-transparent focus:outline-none placeholder:p-6  placeholder:text-black"
           placeholder={Prompt}
           type="text"
           onChange={(e) => Useprompt(e.target.value)}
         />{" "}
         <button
-          className=" relative p-3 min-w-[150px] min-h-[35px] bg-transparent "
+          className=" relative p-3 text-black hover:text-white min-w-[150px] min-h-[35px] bg-transparent border-l-2  border-gray-800 hover:bg-black hover:border-2"
           onClick={handleSurpriseMe}
         >
-          Surprise me !!
+          Random Prompt
         </button>
       </div>
       {/* buttons !!!!!!! */}
       <div className="mt-5 flex justify-around">
         <div>
           <button
-            className="p-4 m-4 min-w-[150px] min-h-[80px]"
+            className="p-2 m-2 min-w-[150px] min-h-[40px] border-2 hover:text-black hover:bg-white"
             onClick={generateimg}
           >
             {isLoading ? (
@@ -97,7 +108,7 @@ function Home() {
                 </div>
               </div>
             ) : (
-              <p>generate</p>
+              <p>Generate</p>
             )}
           </button>
         </div>
@@ -109,6 +120,7 @@ function Home() {
         <img src={Imagethree} alt="" />
       </div>
     </div>
+    </>
   );
 }
 
