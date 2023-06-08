@@ -113,11 +113,15 @@ function Home() {
           </button>
         </div>
       </div>{" "}
-      <div className="flex max-w-[screen] justify-around p-5 mt-5">
-        <img className="shadow-2xl" src={Image} alt="" />
-        <img src={Imageone} alt="" />
-        <img src={Imagetwo} alt="" />
-        <img src={Imagethree} alt="" />
+      <div className="flex max-w-[screen] justify-around p-5 mt-16">
+        <img  src={Image} alt="" />
+        <img  src={Imageone} alt="" />
+        {/* <img src="https://cdn.openai.com/labs/images/An%20armchair%20in%20the%20shape%20of%20an%20avocado.webp?v=1" alt="" className="h-[256px]" />
+        <img src="https://cdn.openai.com/labs/images/An%20armchair%20in%20the%20shape%20of%20an%20avocado.webp?v=1" alt="" className="h-[256px]" />
+        <img src="https://cdn.openai.com/labs/images/An%20armchair%20in%20the%20shape%20of%20an%20avocado.webp?v=1" alt="" className="h-[256px]" />
+        <img src="https://cdn.openai.com/labs/images/An%20armchair%20in%20the%20shape%20of%20an%20avocado.webp?v=1" alt="" className="h-[256px]" /> */}
+        <img  src={Imagetwo} alt="" />
+        <img  src={Imagethree} alt="" />
       </div>
     </div>
     </>
