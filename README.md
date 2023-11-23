@@ -9,6 +9,11 @@
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/900px-Tailwind_CSS_Logo.svg.png?20211001194333" alt="vite_logo" style="height:50px"/> 
 </div>
 
+🚨 Our code is currently not functional due to changes in the open API's policy, and their new API limits for free users.
+
+🎥 Check out a demo of our code in action:
+[Demo Video - Imagine Image Generator](https://drive.google.com/file/d/1yEScoYGZhY9UcLl5w7d6ou2pmXNrVhFJ/view?usp=sharing))
+
 # HOME SCREEN
 <img src="https://iili.io/H4W1Us2.png" alt="Home " border="0">
 
